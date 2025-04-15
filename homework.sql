@@ -1,0 +1,24 @@
+CREATE TABLE IF NOT EXISTS WORKERS(
+    WORKER_ID VARCHAR(20) PRIMARY KEY,
+    NAME TEXT,
+    SALARY TEXT NOT NULL
+);
+
+INSERT INTO WORKERS(WORKER_ID, NAME, SALARY) VALUES
+    ('1', 'Sanjay', '1,00,000'),
+    ('2', 'George', '4,00,000'),
+    ('3', 'Harry', '90,000'),
+    ('4', 'Terry', '3,00,000'),
+    ('5', 'Timmy', '2,50,000'),
+    ('6', 'Bean', '1,50,000');
+
+SELECT SUM(SALARY) AS Sum_Salary
+FROM WORKERS;
+
+SELECT AVG(SALARY) AS Avg
+FROM WORKERS;
+
+SELECT MIN(SALARY) AS min
+FROM WORKERS;
+
+SELECT MAX(SALARY) AS max
